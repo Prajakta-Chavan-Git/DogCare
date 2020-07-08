@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDFC2154-66B0-41B2-854E-0A0FB624096A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DogCare</RootNamespace>
+    <AssemblyName>DogCare</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Breeds_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Essential_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Breeds_Class.cs" />
+    <Compile Include="Breeds_Window.xaml.cs">
+      <DependentUpon>Breeds_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dog_Storage.cs" />
+    <Compile Include="Essentials_Class.cs" />
+    <Compile Include="Essential_Window.xaml.cs">
+      <DependentUpon>Essential_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralDogCare_Class.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\img1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\img2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\img3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\img4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\img5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cor1.jpg" />
+    <Resource Include="Images\cor2.jpg" />
+    <Resource Include="Images\cor3.jpg" />
+    <Resource Include="Images\cor4.jpg" />
+    <Resource Include="Images\cor5.jpg" />
+    <Resource Include="Images\dash1.jpg" />
+    <Resource Include="Images\dash2.jpg" />
+    <Resource Include="Images\dash3.jpg" />
+    <Resource Include="Images\dash4.jpg" />
+    <Resource Include="Images\dash5.jpg" />
+    <Resource Include="Images\ger1.jpg" />
+    <Resource Include="Images\ger2.jpg" />
+    <Resource Include="Images\ger3.jpg" />
+    <Resource Include="Images\ger4.jpg" />
+    <Resource Include="Images\ger5.jpg" />
+    <Resource Include="Images\gol1.jpg" />
+    <Resource Include="Images\gol2.jpg" />
+    <Resource Include="Images\gol3.jpg" />
+    <Resource Include="Images\gol4.jpg" />
+    <Resource Include="Images\gol5.jpg" />
+    <Resource Include="Images\grooming.jpg" />
+    <Resource Include="Images\grooming1.jpg" />
+    <Resource Include="Images\house1.jpg" />
+    <Resource Include="Images\house2.jpg" />
+    <Resource Include="Images\house3.jpg" />
+    <Resource Include="Images\lab1.jpg" />
+    <Resource Include="Images\lab2.jpg" />
+    <Resource Include="Images\lab3.jpg" />
+    <Resource Include="Images\lab4.jpg" />
+    <Resource Include="Images\lab5.jpg" />
+    <Resource Include="Images\pit1.jpg" />
+    <Resource Include="Images\pit2.jpg" />
+    <Resource Include="Images\pit3.jpg" />
+    <Resource Include="Images\pit4.jpg" />
+    <Resource Include="Images\pit5.jpg" />
+    <Resource Include="Images\play2.jpg" />
+    <Resource Include="Images\play3.jpg" />
+    <Resource Include="Images\pod1.jpg" />
+    <Resource Include="Images\pod2.jpg" />
+    <Resource Include="Images\pod3.jpg" />
+    <Resource Include="Images\pod4.jpg" />
+    <Resource Include="Images\pod5.jpg" />
+    <Resource Include="Images\shi1.jpg" />
+    <Resource Include="Images\shi2.jpg" />
+    <Resource Include="Images\shi3.jpg" />
+    <Resource Include="Images\shi4.jpg" />
+    <Resource Include="Images\shi5.jpg" />
+    <Resource Include="Images\yor1.jpg" />
+    <Resource Include="Images\yor2.jpg" />
+    <Resource Include="Images\yor3.jpg" />
+    <Resource Include="Images\yor4.jpg" />
+    <Resource Include="Images\yor5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\beagle1.jpg" />
+    <Resource Include="Images\beagle2.jpg" />
+    <Resource Include="Images\beagle3.jpg" />
+    <Resource Include="Images\beagle4.jpg" />
+    <Resource Include="Images\beagle5.jpg" />
+    <Resource Include="Images\boxer1.jpg" />
+    <Resource Include="Images\boxer2.jpg" />
+    <Resource Include="Images\boxer3.jpg" />
+    <Resource Include="Images\boxer4.jpg" />
+    <Resource Include="Images\boxer5.jpg" />
+    <Resource Include="Images\chi1.jpg" />
+    <Resource Include="Images\chi2.jpg" />
+    <Resource Include="Images\chi3.jpg" />
+    <Resource Include="Images\chi4.jpg" />
+    <Resource Include="Images\chi5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\house4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\house5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\train1.jpg" />
+    <Resource Include="Images\train2.jpg" />
+    <Resource Include="Images\train3.jpg" />
+    <Resource Include="Images\train4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\train5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\grooming3.jpg" />
+    <Resource Include="Images\grooming4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\grooming5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\med1.jpg" />
+    <Resource Include="Images\med2.JPG" />
+    <Resource Include="Images\med3.JPG" />
+    <Resource Include="Images\med4.JPG" />
+    <Resource Include="Images\med5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hand1.JPG" />
+    <Resource Include="Images\hand2.JPG" />
+    <Resource Include="Images\hand3.JPG" />
+    <Resource Include="Images\hand4.JPG" />
+    <Resource Include="Images\hand5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\grooming2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\food1.JPG" />
+    <Resource Include="Images\food2.JPG" />
+    <Resource Include="Images\food3.JPG" />
+    <Resource Include="Images\food4.JPG" />
+    <Resource Include="Images\food5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dish1.JPG" />
+    <Resource Include="Images\dish2.JPG" />
+    <Resource Include="Images\dish3.JPG" />
+    <Resource Include="Images\dish4.JPG" />
+    <Resource Include="Images\dish5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\toy1.JPG" />
+    <Resource Include="Images\toy2.JPG" />
+    <Resource Include="Images\toy3.JPG" />
+    <Resource Include="Images\toy4.JPG" />
+    <Resource Include="Images\toy5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\brush1.JPG" />
+    <Resource Include="Images\brush2.JPG" />
+    <Resource Include="Images\brush3.JPG" />
+    <Resource Include="Images\brush4.JPG" />
+    <Resource Include="Images\brush5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\collar1.JPG" />
+    <Resource Include="Images\collar2.JPG" />
+    <Resource Include="Images\collar3.JPG" />
+    <Resource Include="Images\collar4.JPG" />
+    <Resource Include="Images\collar5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leash1.JPG" />
+    <Resource Include="Images\leash2.JPG" />
+    <Resource Include="Images\leash3.JPG" />
+    <Resource Include="Images\leash4.JPG" />
+    <Resource Include="Images\leash5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\carrier1.JPG" />
+    <Resource Include="Images\carrier2.JPG" />
+    <Resource Include="Images\carrier3.JPG" />
+    <Resource Include="Images\carrier4.JPG" />
+    <Resource Include="Images\carrier5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\crate1.JPG" />
+    <Resource Include="Images\crate2.JPG" />
+    <Resource Include="Images\crate3.JPG" />
+    <Resource Include="Images\crate4.JPG" />
+    <Resource Include="Images\crate5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bed1.JPG" />
+    <Resource Include="Images\bed2.JPG" />
+    <Resource Include="Images\bed3.JPG" />
+    <Resource Include="Images\bed4.JPG" />
+    <Resource Include="Images\bed5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hyg1.JPG" />
+    <Resource Include="Images\hyg2.JPG" />
+    <Resource Include="Images\hyg3.JPG" />
+    <Resource Include="Images\hyg4.JPG" />
+    <Resource Include="Images\hyg5.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

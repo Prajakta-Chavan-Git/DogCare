@@ -1,0 +1,45 @@
+﻿<Window x:Class="DogCare.Essential_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DogCare"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+         Title="H A P P Y - P U P P Y" 
+        Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#f5efef">
+        <ListBox x:Name="Essential_List" Height="440" Margin="5,121,738.333,0" VerticalAlignment="Top" Style="{StaticResource liststyle}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock  TextWrapping="Wrap" Height="25" Width="200" Style="{StaticResource bigtext}" >
+                        <Run Text="{Binding EssentialName}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+        <StackPanel Background="#ba9595" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="993" >
+            <TextBlock Style="{StaticResource MainHeading}" TextWrapping="Wrap" Text="H A P P Y - P U P P Y"  Height="47" HorizontalAlignment="Left" Width="993" />
+        </StackPanel>
+        <StackPanel DataContext="{Binding ElementName=Essential_List, Path=SelectedItem}" HorizontalAlignment="Left" Height="505" Margin="255,56,0,0" VerticalAlignment="Top" Width="730">
+
+            <TextBlock Style="{StaticResource Heading}" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Margin="-264,0,0,0"><Run Text="{Binding EssentialName}"/></TextBlock>
+            <StackPanel  DataContext="{Binding SelectedItem, ElementName=Essential_List}" Orientation="Horizontal" Height="193" Margin="5,5,0,0" VerticalAlignment="Top" >
+                <Image Height="175" Width="176" Source="{Binding Imgpath1}" Margin="0,0,2,0" Stretch="Fill"/>
+                <Image Height="175" Source="{Binding Imgpath2}" Width="176" Margin="2,0,2,0" Stretch="Fill"/>
+                <Image Height="175" Source="{Binding Imgpath3}" Width="176" Margin="2,0,2,0"  Stretch="Fill"/>
+                <Image Height="175" Source="{Binding Imgpath4}" Width="176" Margin="2,9,2,9.333"  Stretch="Fill"/>
+                <!--<Image Height="175" Source="{Binding Imgpath5}" Width="144" Margin="5,0,5,0" Stretch="Fill"/>-->
+
+            </StackPanel>
+            <TextBlock Style="{StaticResource Alltext}" TextWrapping="Wrap" VerticalAlignment="Top" Height="239" Margin="0,0,5,0"><Run Text="{Binding EssentialDescription}"/></TextBlock>
+        </StackPanel>
+        <StackPanel Margin="5,56,738.333,454.667" Orientation="Vertical" >
+            <TextBlock TextWrapping="Wrap" Text="Filter by breed name" Foreground="{StaticResource ResourceKey=DarkPink}" VerticalAlignment="Top" Height="19"/>
+            <TextBox x:Name="Essential_Filter" Text="" TextChanged="Essential_Filter_TextChanged" ToolTip="Filter by Essenntials" Height="34" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
